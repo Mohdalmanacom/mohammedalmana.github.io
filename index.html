@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Almana | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-beige: #f2efe9;
+      --bg-white: #ffffff;
+      --bg-dark: #545454;
+      --bg-footer: #464646;
+      --text-main: #1c1c1c;
+      --text-muted: #575757;
+      --text-light: #f5f5f5;
+      --btn-black: #111111;
+      --border-line: #b8b5ae;
+      --max-width: 1080px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--bg-white); line-height: 1.65; }
+    h1, h2, h3, .serif-font { font-family: 'Lora', serif; font-weight: 400; }
+    .top-bar { position: sticky; top: 0; z-index: 100; background: rgba(242, 239, 233, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 10px 24px; display: flex; justify-content: flex-end; }
+    .lang-btn { background: transparent; border: 1px solid var(--btn-black); color: var(--btn-black); padding: 5px 14px; font-size: 0.85rem; text-decoration: none; display: inline-block; }
+    .lang-btn:hover { background: var(--btn-black); color: #fff; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+    .hero { background-color: var(--bg-beige); padding-top: 40px; padding-bottom: 20px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 20px; }
+    .hero-content { text-align: center; padding: 20px 20px; }
+    .hero-name { font-size: 2.8rem; margin-bottom: 12px; }
+    .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); font-family: 'Lora', serif; margin-bottom: 28px; white-space: pre-line; }
+    .hero-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { background-color: var(--btn-black); color: #fff; text-decoration: none; padding: 11px 36px; font-size: 0.85rem; display: inline-block; }
+    .btn-secondary { background-color: transparent; color: var(--btn-black); border: 1px solid var(--btn-black); text-decoration: none; padding: 11px 28px; font-size: 0.85rem; display: inline-block; }
+    .hero-image-wrap { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; min-height: 320px; }
+    .hero-image-wrap img { width: 100%; max-width: 480px; max-height: 640px; object-fit: contain; display: block; mix-blend-mode: multiply; }
+    .about-section { background-color: var(--bg-white); padding: 90px 0; }
+    .about-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 50px; }
+    .about-title { font-size: 2.5rem; margin-bottom: 24px; }
+    .about-text { font-size: 0.98rem; color: var(--text-main); text-align: justify; line-height: 1.85; }
+    .about-quote-card { background-color: var(--bg-beige); padding: 48px 36px; border-inline-start: 3px solid var(--btn-black); display: flex; justify-content: center; }
+    .about-quote-text { font-family: 'Lora', serif; font-size: 1.2rem; font-style: italic; line-height: 1.75; color: var(--text-main); }
+    .journey-section { background-color: var(--bg-beige); padding: 90px 0; }
+    .split-layout { display: grid; grid-template-columns: 0.8fr 2.2fr; gap: 40px; }
+    .section-side-title { font-size: 1.5rem; line-height: 1.35; }
+    .timeline-item { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--border-line); }
+    .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-tag { font-family: 'Lora', serif; font-style: italic; font-weight: 600; font-size: 0.95rem; }
+    .timeline-role { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+    .timeline-desc { font-size: 0.9rem; text-align: justify; }
+    .edu-section { background-color: var(--bg-white); padding: 90px 0; }
+    .edu-block { padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--border-line); }
+    .edu-degree { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+    .edu-uni { font-size: 0.88rem; color: var(--text-muted); }
+    .edu-year { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+    .edu-subgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding-top: 8px; }
+    .subgrid-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
+    .subgrid-list { list-style: none; font-size: 0.86rem; color: var(--text-muted); }
+    .subgrid-list li { margin-bottom: 6px; }
+    .dimensions-section { display: grid; grid-template-columns: 1fr 2fr; }
+    .dim-left { background-color: var(--bg-beige); padding: 90px 40px; display: flex; align-items: center; justify-content: center; }
+    .dim-right { background-color: var(--bg-dark); color: var(--text-light); padding: 90px 60px; }
+    .dim-group { margin-bottom: 48px; }
+    .dim-group:last-child { margin-bottom: 0; }
+    .dim-group-header { font-weight: 700; font-size: 0.95rem; margin-bottom: 20px; color: #ffffff; }
+    .dim-item { margin-bottom: 18px; }
+    .dim-item-title { font-weight: 600; font-size: 0.9rem; color: #ffffff; }
+    .dim-item-desc { font-size: 0.85rem; color: #dcdcdc; }
+    .footer-section { background-color: var(--bg-footer); color: var(--text-light); padding: 80px 0 50px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-title { font-size: 2.2rem; margin-bottom: 32px; color: #fff; }
+    .footer-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .footer-bio { font-size: 0.9rem; color: #cccccc; margin-bottom: 24px; }
+    .footer-links { list-style: none; margin-bottom: 40px; }
+    .footer-links li { margin-bottom: 10px; font-size: 0.9rem; }
+    .footer-links a { color: #ffffff; text-decoration: underline; text-underline-offset: 4px; }
+    .copyright { font-size: 0.8rem; color: #aaaaaa; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; }
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .hero-grid, .about-grid, .split-layout, .edu-subgrid, .dimensions-section { grid-template-columns: 1fr; }
+      .hero { padding-bottom: 10px; }
+      .hero-content { padding-bottom: 10px; }
+      .hero-image-wrap { min-height: 280px; margin-top: 5px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .dim-left { padding: 50px 24px; justify-content: flex-start; }
+      .dim-right { padding: 50px 24px; }
+      .hero-name { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <a href="/ar" class="lang-btn">العربية · English</a>
+  </div>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-name">Mohammed Almana</h1>
+        <p class="hero-subtitle">Drilling & Operations Engineer
+LL.B. | Critical Reasoning</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Reach out</a>
+          <a href="Mohammed-Almana-CV.pdf" class="btn-secondary" target="_blank">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="profile.png" alt="Mohammed Almana" />
+      </div>
+    </div>
+  </section>
+  <section class="about-section">
+    <div class="container about-grid">
+      <div>
+        <h2 class="about-title">About Me</h2>
+        <p class="about-text">Bridging the operational rigor of field engineering, the structural precision of legal text, and the discipline of critical reasoning. My career is a continuous pursuit of analytical depth—connecting real-world operational realities with regulatory frameworks and sound epistemology to test arguments and drive high-stakes decision-making.</p>
+      </div>
+      <div class="about-quote-card">
+        <p class="about-quote-text">“Engineering teaches me to understand reality, Law teaches me to read the framework, and Critical Reasoning teaches me to test the argument.”</p>
+      </div>
+    </div>
+  </section>
+  <section class="journey-section">
+    <div class="container split-layout">
+      <div><h2 class="section-side-title">Career Journey</h2></div>
+      <div>
+        <div class="timeline-item">
+          <div class="timeline-tag">Present</div>
+          <div>
+            <div class="timeline-role">Operations Optimization (Efficiency & Performance Engineering)</div>
+            <div class="timeline-sub">Drilling & Operational Efficiency</div>
+            <p class="timeline-desc">Five years to present focused on maximizing operational efficiency, reducing non-productive time (NPT), eliminating waste, and standardizing performance metrics—supported by an integrated perspective that combines technical reality, regulatory awareness, and structured reasoning.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">Foundation</div>
+          <div>
+            <div class="timeline-role">Field Engineering: Drilling Operations (Rig Execution & Field Management)</div>
+            <div class="timeline-sub">Field Execution & Operations</div>
+            <p class="timeline-desc">Nearly a decade of direct field operations on drilling rigs—managing complex technical challenges, operational risks, and real-time execution in demanding environments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="edu-section">
+    <div class="container split-layout">
+      <div><h2 class="section-side-title">Education &
+Credentials</h2></div>
+      <div>
+        <div class="edu-block">
+          <div class="edu-degree">Bachelor of Science in Petroleum & Natural Gas Engineering with Minor in Communication Studies</div>
+          <div class="edu-uni">West Virginia University (WVU) — Morgantown, WV, USA</div>
+          <div class="edu-year">2011</div>
+        </div>
+        <div class="edu-block">
+          <div class="edu-degree">Bachelor of Laws (LL.B.)</div>
+          <div class="edu-uni">Prince Mugrin University — Saudi Arabia</div>
+          <div class="edu-year">2026</div>
+        </div>
+        <div class="edu-subgrid">
+          <div>
+            <div class="subgrid-title">Professional Certifications</div>
+            <ul class="subgrid-list">
+              <li>• Certified Petroleum Engineer — SPE</li>
+              <li>• Project Management Professional — PMP® (PMI)</li>
+              <li>• Fundamentals of Engineering — FE (NCEES)</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subgrid-title">Specialized Training</div>
+            <ul class="subgrid-list">
+              <li>Sana’a Al-Mohawer Academy</li>
+              <li>Intensive Program in Critical Thinking, Logical Reasoning, Epistemology & Argumentation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dimensions-section">
+    <div class="dim-left"><h2 class="section-side-title">Three Dimensions,
+One Perspective</h2></div>
+    <div class="dim-right">
+      <div class="dim-group">
+        <div class="dim-group-header">Core Dimensions</div>
+        <div class="dim-item"><div class="dim-item-title">Engineering & Operations</div><div class="dim-item-desc">Assessing reality, interpreting data, diagnosing root causes, and translating complex technical problems into measurable, executable decisions.</div></div>
+        <div class="dim-item"><div class="dim-item-title">Law & Reasoning</div><div class="dim-item-desc">Contextual reading of legal texts, deconstructing claims, evaluating contractual frameworks, and distinguishing solid evidence from mere inference.</div></div>
+        <div class="dim-item"><div class="dim-item-title">Knowledge & Research</div><div class="dim-item-desc">Exploring complex interdisciplinary questions, financial markets, literature, and continuous knowledge expansion.</div></div>
+      </div>
+      <div class="dim-group">
+        <div class="dim-group-header">Analytical Pillars & Languages</div>
+        <div class="dim-item"><div class="dim-item-title">Decision Architecture</div><div class="dim-item-desc">Combining empirical engineering data with regulatory compliance and logical validation before committing to a course of action.</div></div>
+        <div class="dim-item"><div class="dim-item-title">Beyond the Field</div><div class="dim-item-desc">Active engagement with Arabic poetry and literature, financial market dynamics, and epistemological research.</div></div>
+        <div class="dim-item"><div class="dim-item-title">Languages</div><div class="dim-item-desc">Arabic (Native) · English (Full Professional Proficiency)</div></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <h2 class="footer-title">Connect</h2>
+      <div class="footer-name">Mohammed Almana</div>
+      <p class="footer-bio">Open for professional dialogue, technical inquiries, and strategic collaborations.</p>
+      <ul class="footer-links">
+        <li>Email: <a href="mailto:contact@mohammedalmana.com">contact@mohammedalmana.com</a></li>
+        <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+        <li><a href="Mohammed-Almana-CV.pdf" target="_blank">Curriculum Vitae (CV) — Download PDF</a></li>
+        <li><a href="contact.vcf" target="_blank">Digital Contact Card — Save vCard</a></li>
+      </ul>
+      <div class="copyright">© 2026 Mohammed Almana. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

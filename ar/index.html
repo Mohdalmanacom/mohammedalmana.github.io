@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محمد المانـع | السيرة المهنية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-beige: #f2efe9;
+      --bg-white: #ffffff;
+      --bg-dark: #545454;
+      --bg-footer: #464646;
+      --text-main: #1c1c1c;
+      --text-muted: #575757;
+      --text-light: #f5f5f5;
+      --btn-black: #111111;
+      --border-line: #b8b5ae;
+      --max-width: 1080px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Tajawal', sans-serif; color: var(--text-main); background-color: var(--bg-white); line-height: 1.8; }
+    h1, h2, h3, .serif-font { font-family: 'Amiri', serif; font-weight: 700; }
+    .top-bar { position: sticky; top: 0; z-index: 100; background: rgba(242, 239, 233, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 10px 24px; display: flex; justify-content: flex-end; }
+    .lang-btn { background: transparent; border: 1px solid var(--btn-black); color: var(--btn-black); padding: 5px 14px; font-size: 0.85rem; text-decoration: none; display: inline-block; }
+    .lang-btn:hover { background: var(--btn-black); color: #fff; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+    .hero { background-color: var(--bg-beige); padding-top: 40px; padding-bottom: 20px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 20px; }
+    .hero-content { text-align: center; padding: 20px 20px; }
+    .hero-name { font-size: 2.8rem; margin-bottom: 12px; }
+    .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); font-family: 'Tajawal', sans-serif; margin-bottom: 28px; white-space: pre-line; }
+    .hero-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { background-color: var(--btn-black); color: #fff; text-decoration: none; padding: 11px 36px; font-size: 0.85rem; display: inline-block; }
+    .btn-secondary { background-color: transparent; color: var(--btn-black); border: 1px solid var(--btn-black); text-decoration: none; padding: 11px 28px; font-size: 0.85rem; display: inline-block; }
+    .hero-image-wrap { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; min-height: 320px; }
+    .hero-image-wrap img { width: 100%; max-width: 480px; max-height: 640px; object-fit: contain; display: block; mix-blend-mode: multiply; }
+    .about-section { background-color: var(--bg-white); padding: 90px 0; }
+    .about-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 50px; }
+    .about-title { font-size: 2.5rem; margin-bottom: 24px; }
+    .about-text { font-size: 0.98rem; color: var(--text-main); text-align: justify; line-height: 1.85; }
+    .about-quote-card { background-color: var(--bg-beige); padding: 48px 36px; border-inline-start: 3px solid var(--btn-black); display: flex; justify-content: center; }
+    .about-quote-text { font-family: 'Amiri', serif; font-style: normal; font-size: 1.35rem; line-height: 1.9; color: var(--text-main); }
+    .journey-section { background-color: var(--bg-beige); padding: 90px 0; }
+    .split-layout { display: grid; grid-template-columns: 0.8fr 2.2fr; gap: 40px; }
+    .section-side-title { font-size: 1.5rem; line-height: 1.35; }
+    .timeline-item { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--border-line); }
+    .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-tag { font-family: 'Amiri', serif; font-weight: 600; font-size: 0.95rem; }
+    .timeline-role { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+    .timeline-desc { font-size: 0.9rem; text-align: justify; }
+    .edu-section { background-color: var(--bg-white); padding: 90px 0; }
+    .edu-block { padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--border-line); }
+    .edu-degree { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+    .edu-uni { font-size: 0.88rem; color: var(--text-muted); }
+    .edu-year { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+    .edu-subgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding-top: 8px; }
+    .subgrid-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
+    .subgrid-list { list-style: none; font-size: 0.86rem; color: var(--text-muted); }
+    .subgrid-list li { margin-bottom: 6px; }
+    .dimensions-section { display: grid; grid-template-columns: 1fr 2fr; }
+    .dim-left { background-color: var(--bg-beige); padding: 90px 40px; display: flex; align-items: center; justify-content: center; }
+    .dim-right { background-color: var(--bg-dark); color: var(--text-light); padding: 90px 60px; }
+    .dim-group { margin-bottom: 48px; }
+    .dim-group:last-child { margin-bottom: 0; }
+    .dim-group-header { font-weight: 700; font-size: 0.95rem; margin-bottom: 20px; color: #ffffff; }
+    .dim-item { margin-bottom: 18px; }
+    .dim-item-title { font-weight: 600; font-size: 0.9rem; color: #ffffff; }
+    .dim-item-desc { font-size: 0.85rem; color: #dcdcdc; }
+    .footer-section { background-color: var(--bg-footer); color: var(--text-light); padding: 80px 0 50px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-title { font-size: 2.2rem; margin-bottom: 32px; color: #fff; }
+    .footer-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .footer-bio { font-size: 0.9rem; color: #cccccc; margin-bottom: 24px; }
+    .footer-links { list-style: none; margin-bottom: 40px; }
+    .footer-links li { margin-bottom: 10px; font-size: 0.9rem; }
+    .footer-links a { color: #ffffff; text-decoration: underline; text-underline-offset: 4px; }
+    .copyright { font-size: 0.8rem; color: #aaaaaa; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; }
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .hero-grid, .about-grid, .split-layout, .edu-subgrid, .dimensions-section { grid-template-columns: 1fr; }
+      .hero { padding-bottom: 10px; }
+      .hero-content { padding-bottom: 10px; }
+      .hero-image-wrap { min-height: 280px; margin-top: 5px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .dim-left { padding: 50px 24px; justify-content: flex-start; }
+      .dim-right { padding: 50px 24px; }
+      .hero-name { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <a href="/" class="lang-btn">English · العربية</a>
+  </div>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-name">محمد المانـع</h1>
+        <p class="hero-subtitle">مهندس حفر وعمليات
+بكالوريوس قانون | التفكير الاستدلالي</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">التواصل</a>
+          <a href="../Mohammed-Almana-CV.pdf" class="btn-secondary" target="_blank">تحميل السيرة الذاتية</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="arabic-profile.png" alt="محمد المانـع" />
+      </div>
+    </div>
+  </section>
+  <section class="about-section">
+    <div class="container about-grid">
+      <div>
+        <h2 class="about-title">عن المنظور</h2>
+        <p class="about-text">بين صرامة الميدان الهندسي، ودقة النص القانوني، وأدوات التفكير النقدي؛ رحلة مستمرة في الفهم والتحليل وصناعة القرار. لا أتعامل مع هذه الحقول كمسارات منفصلة، بل كمنظومة معرفية واحدة تربط الواقع التشغيلي بالإطار النظامي واختبار الحجة قبل بناء القرار.</p>
+      </div>
+      <div class="about-quote-card">
+        <p class="about-quote-text">«الهندسة تعلمني أن أفهم الواقع، والقانون أن أقرأ الإطار، والتفكير الاستدلالي أن أختبر الحجة.»</p>
+      </div>
+    </div>
+  </section>
+  <section class="journey-section">
+    <div class="container split-layout">
+      <div><h2 class="section-side-title">المسيرة المهنية</h2></div>
+      <div>
+        <div class="timeline-item">
+          <div class="timeline-tag">الحاضر</div>
+          <div>
+            <div class="timeline-role">تحسين العمليات (Operations Optimization)</div>
+            <div class="timeline-sub">رفع الكفاءة وضبط الأداء</div>
+            <p class="timeline-desc">خمس سنوات وحتى الآن من التركيز على تحسين الكفاءة التشغيلية، وتقليص الهدر، وتطوير معايير قياس الأداء؛ مع توظيف منظور متكامل يربط المعطيات الفنية بالفهم النظامي والتعاقدي وأدوات التفكير النقدي.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">التأسيس الميداني</div>
+          <div>
+            <div class="timeline-role">الميدان — عمليات حفر الآبار</div>
+            <div class="timeline-sub">التنفيذ الهندسي وإدارة العمليات</div>
+            <p class="timeline-desc">نحو عقد من العمل الميداني المباشر في منصات الحفر، والتعامل الفوري مع التحديات التشغيلية والفنية في بيئات العمل عالية الدقة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="edu-section">
+    <div class="container split-layout">
+      <div><h2 class="section-side-title">المؤهلات
+والاعتمادات</h2></div>
+      <div>
+        <div class="edu-block">
+          <div class="edu-degree">بكالوريوس العلوم في هندسة البترول والغاز الطبيعي (تخصص فرعي: دراسات التواصل)</div>
+          <div class="edu-uni">جامعة ويست فيرجينيا (West Virginia University) — الولايات المتحدة</div>
+          <div class="edu-year">2011</div>
+        </div>
+        <div class="edu-block">
+          <div class="edu-degree">بكالوريوس قانون</div>
+          <div class="edu-uni">جامعة الأمير مساعد بن عبد الرحمن — المملكة العربية السعودية</div>
+          <div class="edu-year">2026</div>
+        </div>
+        <div class="edu-subgrid">
+          <div>
+            <div class="subgrid-title">الاعتمادات المهنية</div>
+            <ul class="subgrid-list">
+              <li>• مهندس بترول معتمد — SPE</li>
+              <li>• محترف إدارة المشاريع المعتمد — PMP® (PMI)</li>
+              <li>• شهادة أساسيات الهندسة — FE (NCEES)</li>
+            </ul>
+          </div>
+          <div>
+            <div class="subgrid-title">البرامج المعرفية التخصصية</div>
+            <ul class="subgrid-list">
+              <li>أكاديمية صناعة المحاور</li>
+              <li>برنامج مكثف في التفكير النقدي، وأصول الاستدلال، ونظرية المعرفة، وأدوات الحوار والمناظرة.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dimensions-section">
+    <div class="dim-left"><h2 class="section-side-title">ثلاثة أبعاد،
+منظور واحد</h2></div>
+    <div class="dim-right">
+      <div class="dim-group">
+        <div class="dim-group-header">الأبعاد المعرفية والمهنية</div>
+        <div class="dim-item"><div class="dim-item-title">الهندسة والعمليات</div><div class="dim-item-desc">فهم الواقع الميداني، وقراءة البيانات، وتشخيص الخلل، وتحويل المشكلات المركبة إلى قرارات قابلة للتنفيذ والقياس.</div></div>
+        <div class="dim-item"><div class="dim-item-title">القانون والاستدلال</div><div class="dim-item-desc">قراءة النص في سياقه النظامي، وتفكيك الادعاءات، والتمييز الدقيق بين الدليل والاستنتاج.</div></div>
+        <div class="dim-item"><div class="dim-item-title">المعرفة والبحث</div><div class="dim-item-desc">الاهتمام بالأسئلة المركبة، والبحث المستقل، وتوسيع دائرة المعرفة عبر حقول متعددة.</div></div>
+      </div>
+      <div class="dim-group">
+        <div class="dim-group-header">الامتداد واللغات</div>
+        <div class="dim-item"><div class="dim-item-title">صناعة القرار</div><div class="dim-item-desc">موازنة المعطيات الفنية مع الأطر النظامية والمنطق الاستدلالي قبل بناء الخلاصات.</div></div>
+        <div class="dim-item"><div class="dim-item-title">خارج نطاق العمل</div><div class="dim-item-desc">اهتمام مستمر بالشعر والأدب، وقراءة تحركات الأسواق المالية، والبحث المعرفي.</div></div>
+        <div class="dim-item"><div class="dim-item-title">اللغات</div><div class="dim-item-desc">العربية (اللغة الأم) · الإنجليزية (إجادة مهنية كاملة)</div></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <h2 class="footer-title">للتواصل</h2>
+      <div class="footer-name">محمد المانـع</div>
+      <p class="footer-bio">للتواصل، والاستفسارات الفنية، والفرص المشتركة:</p>
+      <ul class="footer-links">
+        <li>البريد: <a href="mailto:contact@mohammedalmana.com">contact@mohammedalmana.com</a></li>
+        <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">الحساب</a></li>
+        <li><a href="../Mohammed-Almana-CV.pdf" target="_blank">السيرة الذاتية (CV) — تحميل الملف</a></li>
+        <li><a href="../contact.vcf" target="_blank">بطاقة الاتصال الرقمية (vCard) — حفظ جهة الاتصال</a></li>
+      </ul>
+      <div class="copyright">© 2026 Mohammed Almana — جميع الحقوق محفوظة.</div>
+    </div>
+  </footer>
+</body>
+</html>
